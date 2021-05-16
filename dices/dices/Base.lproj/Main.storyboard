@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="top" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ait-Yf-ARY">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="qkk-DG-WII">
+                                <rect key="frame" x="83" y="445.66666666666669" width="262" height="105.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="E3G-nc-gla">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="105.33333333333333"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="JdZ-aH-r1c">
+                                        <rect key="frame" x="158" y="0.0" width="104" height="105.33333333333333"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-Sl-Y1K">
+                                <rect key="frame" x="47.333333333333343" y="101.99999999999999" width="333.33333333333326" height="223.66666666666663"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2X2-RA-gHO">
+                                <rect key="frame" x="75.666666666666686" y="609" width="277" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="TIRAR LOS DADOS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPR-Jo-y3K"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qkk-DG-WII" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2C0-Nc-6Zh"/>
+                            <constraint firstAttribute="bottom" secondItem="Ait-Yf-ARY" secondAttribute="bottom" id="F8q-VV-WcU"/>
+                            <constraint firstItem="2X2-RA-gHO" firstAttribute="top" secondItem="qkk-DG-WII" secondAttribute="bottom" constant="58" id="KPg-sJ-lua"/>
+                            <constraint firstItem="Ait-Yf-ARY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qca-q2-4yd"/>
+                            <constraint firstItem="Ait-Yf-ARY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qqc-Nt-ugF"/>
+                            <constraint firstItem="Z3v-Sl-Y1K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WA9-aJ-7vL"/>
+                            <constraint firstItem="Ait-Yf-ARY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eEt-Cw-sDO"/>
+                            <constraint firstItem="Z3v-Sl-Y1K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="ohe-ol-FuB"/>
+                            <constraint firstItem="2X2-RA-gHO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tCv-DO-M5Y"/>
+                            <constraint firstItem="qkk-DG-WII" firstAttribute="top" secondItem="Z3v-Sl-Y1K" secondAttribute="bottom" constant="120" id="tOK-ah-m5Q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewDiceLeft" destination="E3G-nc-gla" id="Rgq-Tx-dop"/>
+                        <outlet property="imageViewDiceRight" destination="JdZ-aH-r1c" id="uKL-wy-vV7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.78504672897196" y="137.36501079913609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="191.66667175292969" height="266.66665649414062"/>
+        <image name="dice1" width="104" height="105.33333587646484"/>
+        <image name="logo" width="333.33334350585938" height="223.66667175292969"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
