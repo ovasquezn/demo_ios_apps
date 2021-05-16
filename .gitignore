@@ -1,2 +1,12 @@
 .DS_Store
 *.xcuserdata
+*.xcuserstate
+     */.DS_Store
+     .DS_Store
+     project.xcworkspace
+     xcuserdata
+     UserInterfaceState.xcuserstate
+     project.xcworkspace/
+     xcuserdata/
+     UserInterface.xcuserstate
+*/xcsharedata
