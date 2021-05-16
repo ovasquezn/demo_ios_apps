@@ -1,4 +1,2 @@
 .DS_Store
-./dices/dices.xcodeproj/project.xcworkspace/xcuserdata/ovasquez.xcuserdatad/UserInterfaceState.xcuserstate
-./firstApp/firstApp.xcodeproj/project.xcworkspace/xcuserdata/ovasquez.xcuserdatad/UserInterfaceState.xcuserstate
-./dices/dices.xcodeproj/xcshareddata/
+*.xcuserdata
